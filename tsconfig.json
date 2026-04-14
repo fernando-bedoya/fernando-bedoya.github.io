@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
     "module": "ES2020",
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "types": [
       "astro/client"
     ],
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
@@ -22,6 +23,6 @@
   },
   "include": [
     "src/**/*",
-    "astro.config.ts"
+    "astro.config.mjs"
   ]
 }
