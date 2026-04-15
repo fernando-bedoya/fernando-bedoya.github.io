@@ -4,21 +4,6 @@ interface Props {
 }
 
 const { title } = Astro.props;
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Fernando Bedoya",
-  "alternateName": "Fernando",
-  "url": "https://fernando-bedoya.github.io",
-  "image": "https://fernando-bedoya.github.io/favicon.png",
-  "sameAs": [
-    "https://github.com/fernando-bedoya",
-    "https://www.linkedin.com/in/ferchobedoya"
-  ],
-  "jobTitle": "Desarrollador Web",
-  "description": "Estudiante de Ingeniería de Sistemas enfocado en desarrollo web y ciberseguridad."
-};
 ---
 
 <!doctype html>
@@ -62,8 +47,21 @@ const jsonLd = {
     />
 
     <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-      {JSON.stringify(jsonLd)}
+    <script type="application/ld+json" is:inline>
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Fernando Bedoya",
+        "alternateName": "Fernando",
+        "url": "https://fernando-bedoya.github.io",
+        "image": "https://fernando-bedoya.github.io/favicon.png",
+        "sameAs": [
+          "https://github.com/fernando-bedoya",
+          "https://www.linkedin.com/in/ferchobedoya"
+        ],
+        "jobTitle": "Desarrollador Web",
+        "description": "Estudiante de Ingeniería de Sistemas enfocado en desarrollo web y ciberseguridad."
+      })}
     </script>
   </head>
   <body class="bg-[--background] sm:px-28 lg:px-20 px-9">
