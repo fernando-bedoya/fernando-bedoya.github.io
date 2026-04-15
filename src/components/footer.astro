@@ -59,12 +59,18 @@ const currentYear = new Date().getFullYear();
                 icon: "/svg/tailwindcss.svg",
                 alt: "TailwindCSS Logo",
               },
-              {
-                desc: "Deployed on",
-                name: "Vercel",
-                icon: "/svg/vercel.svg",
-                alt: "Vercel Logo",
-              },
+        <span class="text-[var(--white-icon)] text-sm">
+                  Deployed on
+                </span>
+                <img
+                  src="/svg/github.svg"
+                  alt="GitHub Logo"
+                  class="h-5 w-5 object-contain filter brightness-0 invert opacity-50"
+                  loading="lazy"
+                />
+                <span class="text-[var(--white-icon)] text-sm">
+                  GitHub Pages
+                </span>
             ].map((tech) => (
               <div class="flex items-center justify-center lg:justify-normal space-x-3">
                 <span class="text-[var(--white-icon)] text-sm">
@@ -88,9 +94,10 @@ const currentYear = new Date().getFullYear();
       <div class="flex flex-col items-center lg:items-start space-y-6">
         <div class="w-full max-w-xs">
           <iframe
+            data-testid="embed-iframe"
             style="border-radius:12px; border:0;"
-            src="https://open.spotify.com/embed/playlist/2irOd49FRRLFWYccolQeea?utm_source=generator&theme=0&locale=en_US"
-            class="w-full h-40"
+            src="https://open.spotify.com/embed/playlist/4s4Dr8hIvyk3PqEtjuu6GB?utm_source=generator&theme=0&locale=en_US"
+            class="w-full h-80"
             allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"></iframe>
@@ -99,10 +106,10 @@ const currentYear = new Date().getFullYear();
     </div>
 
     <div class="mt-12 pt-8 border-t border-[#ffffff10]">
-      <p class="text-center text-sm text-[var(--white-icon)] space-y-2">
-        <!-- If you are using this template, by MIT License you can't remove the copyright notice -->
+      <p clasSi estás usando esta plantilla, por licencia MIT no puedes eliminar el aviso de copyright -->
         <span class="block sm:inline"
-          >Copyright © {currentYear} <a href="https://github.com/Gothsec"
+          >Copyright © {currentYear} <a href="https://github.com/fernando-bedoya"
+            >Fernando BedoyaentYear} <a href="https://github.com/Gothsec"
             >Oscar Hernandez</a
           >. All rights reserved.</span
         >
